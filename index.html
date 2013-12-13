@@ -63,7 +63,113 @@
 
             <section>
                 <section data-state="soothe">
-                    <h1>Expériences et résultats</h1>
+                    <h1>Expériences initiales</h1>
+                </section>
+
+                <section>
+                    <h3>Catégories</h3>
+
+                    <ul>
+                        <li>Parents : "Science", "Computers" et "Sports"</li>
+                        <li>Enfants : 41 catégories ("Agriculture", "Internet", "Tennis"...)</li>
+                    </ul>
+
+                    <br><br>
+                    
+                    <h3>Prétraitements</h3>
+
+                    <ul>
+                        <li>Pas de <em>stemming</em></li>
+                        <li>Pas d'utilisation de <em>stopwords</em></li>
+                        <li>Enfants séparés au niveau des "ou", "et" et de la ponctuation</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Première distribution</h2>
+    
+                    <img src="img/cloud-fig1.png"><br>
+                    <small>Une tendance générale, mais beaucoup d'enfants près des parents</small>
+                </section>
+
+                <section>
+                    <h2>Problèmes</h2>
+                    
+                    <ul>
+                        <li>Catégories mal définies sans informations sur leur contexte</li>
+                        <li>Faible utilisation de "Computers" au pluriel</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Correctifs</h2>
+                    
+                    <ul>
+                        <li>Suppression des catégories mal définies</li>
+                        <li>Renommage de "Computers" en "Computer"</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Seconde distribution</h2>
+    
+                    <img src="img/cloud-fig2.png"><br>
+                    <small>Une distribution un peu plus claire</small>
+                </section>
+
+                <section>
+                    <h2>Problèmes</h2>
+                    
+                    <ul>
+                        <li>Les documents ne contiennent pas toujours les mots décrivant leurs catégories ("Multimédia" apparaît dans 13% des documents positifs)</li>
+                        <li>Pages d'accueil sans contenu textuel (circa 2002)</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section data-state="sunset">
+                    <h1>Extended Anchortext</h1>
+                </section>
+
+                <section>
+                    <h2>Troisième distribution</h2>
+    
+                    <img src="img/cloud-fig3.png">
+                </section>
+
+                <section>
+                    <h2>Quatrième distribution</h2>
+    
+                    <img src="img/cloud-fig4.png">
+                </section>
+
+                <section>
+                    <h2>Résultats du "training"</h2>
+                    
+                    <p>Chaque document de la collection sera classé </p>
+
+                    <table class="table table-bordered table-centered">
+                        <tr>
+                            <td><em>Feature</em></td>
+                            <td class="success">Ensemble positif</td>
+                            <td class="danger">Ensemble négatif</td>
+                        <tr>
+                            <td><em>Parent</em></td>
+                            <td class="success">0 - $\infty$</td>
+                            <td class="danger">0 - 0.08</td>
+                        </tr>
+                        <tr>
+                            <td><em>Self</em></td>
+                            <td class="success">0.4 - $\infty$</td>
+                            <td class="danger">0 - 0.06</td>
+                        </tr>
+                        <tr>
+                            <td><em>Children</em></td>
+                            <td class="success">0 - 0.4</td>
+                            <td class="danger">0 - 0.02</td>
+                        </tr>
+                    </table>
                 </section>
             </section>
 
@@ -88,7 +194,7 @@
     </div>
 
     <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+    <script src="js/reveal.min.js"></script>    
 
     <script>
     // Full list of configuration options available here:
@@ -98,6 +204,7 @@
         progress: true,
         history: true,
         center: true,
+        slideNumber: true,
 
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
         transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
