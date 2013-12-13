@@ -77,16 +77,21 @@
                     <h2>Article</h2>
                     <p><i>Inferring Hierarchical Descriptions</i></p>
                     <p>E. Glover, D. M. Pennock, S. Lawrence, R. Krovetz</p>
-                    <p>NEC, Princeton</p>
-                    <p>Présenté à la conférence CIKM 2002</p>
+                    <ul>
+                        <li>NEC, Princeton</li>
+                        <li>Présenté à la conférence CIKM 2002</li>
+                        <li>Cité 89 fois depuis</li>
+                    </ul>
                 </section>
 
                 <section>
                     <h2>But</h2>
                     <p>Identifier l'ontologie de termes sur le web</p>
-                    <p>Parent / Self / Child</p>
-                    <p>exemple</p>
-                    <p>A partir d'une collection de documents web</p>
+                    <ul>
+                        <li>Concepts Parent / Self / Child</li>
+                        <i>exemple: "animal", "félin" et "chat"</i>
+                        <li>A partir d'une collection de documents web</li>
+                    </ul>
                 </section>
 
                 <section data-state="submerge">
@@ -95,13 +100,18 @@
 
                 <section>
                     <h2>Nommage automatique</h2>
-                        <p>Identifier une thématique<p>
-                        <p>Nommer un groupe de documents<p>
-                        <p>exemple...</p>
+                    <ul>
+                        <li>Identifier une thématique</li>
+                        <li>Nommer un groupe de documents</li>
+                    </ul>
+                </section>
+
+                <section>
                     <h2>Recherche d'information</h2>
-                        <p>Proposer des résultats liés</p>
-                        <p>Suggérer des requêtes liées</p>
-                        <p>exemple...</p>
+                    <ul>
+                        <li>Proposer des résultats liés</li>
+                        <li>Suggérer des requêtes liées</li>
+                    </ul>
                 </section>
 
                 <section data-state="submerge">
@@ -110,23 +120,35 @@
 
                 <section>
                     <h2>Sur ce sujet</h2>
-                    <p>Pas réellement de travaux précédents</p>
-                    <p>Objectif de "découverte" et non d'amélioration</p>
-                    <p>Utilisation de méthodes venant d'autres approches</p>
+                    <ul>
+                        <li>Pas de travaux précédents pour cette approche</li>
+                        <li>Objectif de "découverte" et non d'amélioration</li>
+                        <li>Utilisation de méthodes venant d'autres approches</li>
+                    </ul>
                 </section>
 
                 <section>
                     <h2>Résumé automatique</h2>
-                    <p>Radev et Fan (2000): identification de thèmes lors de l'analyse de documents web</p>
-                    <p>Hearst (1998) et Caraballo (1999): recherche de relations lexicales en utilisant des motifs</p>
-                    <p>Sanderson et Croft (1999): analyse statistique pour identifier l'inclusion sémantique</p>
-                    <p>Dans chacun des cas, pas de distinction entre "concept parent" et "concept enfant"</p>
+                    <ul>
+                        <li><b>Radev et Fan (2000)</b></li>
+                        Identification de thèmes lors de l'analyse de documents web
+                        <li><b>Hearst (1998) et Caraballo (1999)</b></li>
+                        Recherche de relations lexicales en utilisant des motifs
+                        <li><b>Sanderson et Croft (1999)</b></li>
+                        Analyse statistique pour identifier l'inclusion sémantique
+                        
+                        <p>Dans chacun des cas, pas de distinction entre "concept parent" et "concept enfant"</p>
+                    </ul>
                 </section>
 
                 <section>
                     <h2>Regroupement de documents</h2>
-                    <p>Kumar (1999): construction de groupes de docs pour l'identification de communautés</p>
-                    <p>Hofmann et Puzicha (1998): modèles statistiques pour la hierarchisation de documents (RI)</p>
+                    <ul>
+                        <li><b>Kumar (1999)</b></li>
+                        Construction de groupes de docs pour l'identification de communautés
+                        <li><b>Hofmann et Puzicha (1998)</b></li>
+                        Modèles statistiques pour la hierarchisation de documents (RI)
+                    </ul>
                 </section>
 
             </section>
@@ -144,33 +166,59 @@
                     <h2>Idée</h2>
                     <p>On compare la fréquence d'un terme <i>t</i> dans le document <i>d</i> et dans la collection <i>C</i></p>
                     <ul>
-                        <li>Si <i>t</i> est très présent dans <i>d</i> et rare dans <i>C</i> -> <b>self</b></li>
-                        <li>Si <i>t</i> est assez présent dans <i>d</i> et présent dans <i>C</i> -> <b>parent</b></li>
-                        <li>Si <i>t</i> est assez présent dans <i>d</i> et très rare dans <i>C</i> -> <b>child</b></li>
+                        <li>Si <i>t</i> est très présent dans <i>d</i> et rare dans <i>C</i> : <b>self</b></li>
+                        <li>Si <i>t</i> est assez présent dans <i>d</i> et présent dans <i>C</i> : <b>parent</b></li>
+                        <li>Si <i>t</i> est assez présent dans <i>d</i> et très rare dans <i>C</i> : <b>child</b></li>
                     </ul>
                 </section>
 
                 <section>
-                    graphique frequences
+                    <h2>Fréquences et relations</h2>
+                    <img src="img/freqGraph.png">
                 </section>
 
                 <section>
                     <h2>Corpus</h2>
                     <p>Documents provenant de <i>Open Directory</i></p>
-                    <p>Fournit des catégories pour les docs</p>
-                    screenshot ...
+                    <img src="img/openDir.png">
                 </section>
 
                 <section>
                     <h2>Corpus</h2>
-                    <p>3 catégories sont considérées : Science, Computers, Sport</p>
-                    <p>Ces catégories donnent 41 sous-catégories</p>
-                    <p>Pour chaque catégorie, 500 documents sont retenus</p>
+                    <ul>
+                        <li>On considère les catégories et leurs sous-catégories comme référence</li>
+                        <li>Pour chaque catégorie, 500 documents sont retenus</li>
+                        <li>On conserve 20 000 documents d'autres catégories (bruit)</li>
+                    </ul>
                 </section>
 
-                <section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Algorithme
 
+                        Processus simple: on compare les fréquences à des seuils
+
+                        ```
+                        ## 1. Assign a label to feature f as follows:
+
+                        if (f.neg > maxParentNegative){Label=’N’}
+                        
+                        else if (f.neg > maxSelfNegative){Label=’P’}
+                        
+                        else if (f.pos > minSelfPositive){Label=’S’}
+                        
+                        else if ((f.pos < maxChildPositive) and
+                        
+                        (f.neg < maxChildNegative)){Label=’C’}
+                        
+                        else {Label=’N’}
+                        
+                        ## 2. For each label (P,S,C) sort each feature f with that label
+                        by f.pos
+                        ```
+                    </script>
                 </section>
+
 
 
 
@@ -234,7 +282,6 @@
 
                 <section>
                     <h2>Problèmes</h2>
-                    
                     <ul>
                         <li>Les documents ne contiennent pas toujours les mots décrivant leurs catégories ("Multimédia" apparaît dans 13% des documents positifs)</li>
                         <li>Pages d'accueil sans contenu textuel (circa 2002)</li>
