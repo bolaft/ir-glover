@@ -44,22 +44,137 @@
             </section>
 
             <section>
-                <section data-state="submerge">
-                    <h1>Introduction</h1>
-                </section>
+                <ul>
+                    <li>
+                        <h2>Introduction</h2>
+                            <h4>Contexte</h4>
+                            <h4>Applications</h4>
+                            <h4>Etat de l'art</h4>
+                    </li>
+                    <li class="fragment">
+                        <h2>Travail présenté</h2>
+                            <h4>Méthode</h4>
+                            <h4>Expériences et résultats</h4>
+                    </li>
+                    <li class="fragment">
+                        <h2>Observations</h2>
+                            <h4>Remarques</h4>
+                            <h4>Conclusion</h4>
+                    </li>
+                </ul>
             </section>
-
+            
             <section>
-                <section data-state="sunset">
+                <section data-state="submerge">
+                <h1>Introduction</h1>
+                </section>
+
+                <section data-state="submerge">
+                    <h1>Contexte</h1>
+                </section>
+
+                <section>
+                    <h2>Article</h2>
+                    <p><i>Inferring Hierarchical Descriptions</i></p>
+                    <p>E. Glover, D. M. Pennock, S. Lawrence, R. Krovetz</p>
+                    <p>NEC, Princeton</p>
+                    <p>Présenté à la conférence CIKM 2002</p>
+                </section>
+
+                <section>
+                    <h2>But</h2>
+                    <p>Identifier l'ontologie de termes sur le web</p>
+                    <p>Parent / Self / Child</p>
+                    <p>exemple</p>
+                    <p>A partir d'une collection de documents web</p>
+                </section>
+
+                <section data-state="submerge">
+                    <h1>Applications</h1>
+                </section>
+
+                <section>
+                    <h2>Nommage automatique</h2>
+                        <p>Identifier une thématique<p>
+                        <p>Nommer un groupe de documents<p>
+                        <p>exemple...</p>
+                    <h2>Recherche d'information</h2>
+                        <p>Proposer des résultats liés</p>
+                        <p>Suggérer des requêtes liées</p>
+                        <p>exemple...</p>
+                </section>
+
+                <section data-state="submerge">
                     <h1>État de l'art</h1>
                 </section>
+
+                <section>
+                    <h2>Sur ce sujet</h2>
+                    <p>Pas réellement de travaux précédents</p>
+                    <p>Objectif de "découverte" et non d'amélioration</p>
+                    <p>Utilisation de méthodes venant d'autres approches</p>
+                </section>
+
+                <section>
+                    <h2>Résumé automatique</h2>
+                    <p>Radev et Fan (2000): identification de thèmes lors de l'analyse de documents web</p>
+                    <p>Hearst (1998) et Caraballo (1999): recherche de relations lexicales en utilisant des motifs</p>
+                    <p>Sanderson et Croft (1999): analyse statistique pour identifier l'inclusion sémantique</p>
+                    <p>Dans chacun des cas, pas de distinction entre "concept parent" et "concept enfant"</p>
+                </section>
+
+                <section>
+                    <h2>Regroupement de documents</h2>
+                    <p>Kumar (1999): construction de groupes de docs pour l'identification de communautés</p>
+                    <p>Hofmann et Puzicha (1998): modèles statistiques pour la hierarchisation de documents (RI)</p>
+                </section>
+
             </section>
 
             <section>
                 <section data-state="mint">
-                    <h1>Méthodes</h1>
+                    <h1>Travail présenté</h1>
                 </section>
-            </section>
+
+                <section data-state="mint">
+                    <h1>Méthode</h1>
+                </section>
+
+                <section>
+                    <h2>Idée</h2>
+                    <p>On compare la fréquence d'un terme <i>t</i> dans le document <i>d</i> et dans la collection <i>C</i></p>
+                    <ul>
+                        <li>Si <i>t</i> est très présent dans <i>d</i> et rare dans <i>C</i> -> <b>self</b></li>
+                        <li>Si <i>t</i> est assez présent dans <i>d</i> et présent dans <i>C</i> -> <b>parent</b></li>
+                        <li>Si <i>t</i> est assez présent dans <i>d</i> et très rare dans <i>C</i> -> <b>child</b></li>
+                    </ul>
+                </section>
+
+                <section>
+                    graphique frequences
+                </section>
+
+                <section>
+                    <h2>Corpus</h2>
+                    <p>Documents provenant de <i>Open Directory</i></p>
+                    <p>Fournit des catégories pour les docs</p>
+                    screenshot ...
+                </section>
+
+                <section>
+                    <h2>Corpus</h2>
+                    <p>3 catégories sont considérées : Science, Computers, Sport</p>
+                    <p>Ces catégories donnent 41 sous-catégories</p>
+                    <p>Pour chaque catégorie, 500 documents sont retenus</p>
+                </section>
+
+                <section>
+
+                </section>
+
+
+
+            </section>    
 
             <section>
                 <section data-state="soothe">
