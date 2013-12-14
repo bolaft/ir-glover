@@ -24,7 +24,7 @@
 
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
-    document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
     </script>
 
     <!--[if lt IE 9]>
@@ -47,35 +47,32 @@
                 <ul>
                     <li>
                         <h2>Introduction</h2>
-                            <h4>Sujet</h4>
-                            <h4>Applications</h4>
-                            <h4>Etat de l'art</h4>
+                        <h4>Sujet</h4>
+                        <h4>Applications</h4>
+                        <h4>Etat de l'art</h4>
                     </li>
                     <li class="fragment">
                         <h2>Travail présenté</h2>
-                            <h4>Méthode</h4>
-                            <h4>Expériences et résultats</h4>
+                        <h4>Méthode</h4>
+                        <h4>Expériences et résultats</h4>
                     </li>
                     <li class="fragment">
                         <h2>Observations</h2>
-                            <h4>Remarques</h4>
-                            <h4>Conclusion</h4>
+                        <h4>Remarques</h4>
+                        <h4>Conclusion</h4>
                     </li>
                 </ul>
             </section>
-            
+
             <section>
                 <section data-state="submerge">
-                <h1>Introduction</h1>
-                </section>
-
-                <section data-state="submerge">
-                    <h1>Sujet</h1>
+                    <h1>Introduction</h1>
                 </section>
 
                 <section>
                     <h2>Article</h2>
-                    <p><i>Inferring Hierarchical Descriptions</i></p>
+                    <p><i>Inferring Hierarchical Descriptions</i>
+                    </p>
                     <p>E. Glover, D. M. Pennock, S. Lawrence, R. Krovetz</p>
                     <ul>
                         <li>NEC, Princeton</li>
@@ -87,33 +84,42 @@
                 <section>
                     <h2>But</h2>
                     <p>Identifier l'ontologie de termes sur le web</p>
+                    <br>
                     <ul>
                         <li>Concepts Parent / Self / Child</li>
-                        <i>exemple: "animal", "félin" et "chat"</i>
+                        <i> exemple: "animal", "félin" et "chat"</i>
                         <li>A partir d'une collection de documents web</li>
                     </ul>
                 </section>
 
-                <section data-state="submerge">
-                    <h1>Applications</h1>
-                </section>
-
                 <section>
-                    <h2>Nommage automatique</h2>
+                    <h2>Applications</h2>
+
                     <ul>
-                        <li>Identifier une thématique</li>
-                        <li>Nommer un groupe de documents</li>
+                        <li>
+                            <h4>Nommage automatique</h4>
+                            <ul>
+
+                                <li>Identifier une thématique</li>
+                                <li>Nommer un groupe de documents</li>
+                            </ul>
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <h4>Recherche d'information</h4>
+
+                            <ul>
+                                <li>Proposer des résultats liés</li>
+                                <li>Suggérer des requêtes liées</li>
+                            </ul>
+                        </li>
                     </ul>
                 </section>
+            </section>
 
-                <section>
-                    <h2>Recherche d'information</h2>
-                    <ul>
-                        <li>Proposer des résultats liés</li>
-                        <li>Suggérer des requêtes liées</li>
-                    </ul>
-                </section>
-
+            <section>
                 <section data-state="submerge">
                     <h1>État de l'art</h1>
                 </section>
@@ -130,13 +136,16 @@
                 <section>
                     <h2>Résumé automatique</h2>
                     <ul>
-                        <li><b>Radev et Fan (2000)</b></li>
+                        <li><b>Radev et Fan (2000)</b>
+                        </li>
                         Identification de thèmes lors de l'analyse de documents web
-                        <li><b>Hearst (1998) et Caraballo (1999)</b></li>
+                        <li><b>Hearst (1998) et Caraballo (1999)</b>
+                        </li>
                         Recherche de relations lexicales en utilisant des motifs
-                        <li><b>Sanderson et Croft (1999)</b></li>
+                        <li><b>Sanderson et Croft (1999)</b>
+                        </li>
                         Analyse statistique pour identifier l'inclusion sémantique
-                        
+
                         <p>Dans chacun des cas, pas de distinction entre "concept parent" et "concept enfant"</p>
                     </ul>
                 </section>
@@ -144,9 +153,11 @@
                 <section>
                     <h2>Regroupement de documents</h2>
                     <ul>
-                        <li><b>Kumar (1999)</b></li>
+                        <li><b>Kumar (1999)</b>
+                        </li>
                         Construction de groupes de docs pour l'identification de communautés
-                        <li><b>Hofmann et Puzicha (1998)</b></li>
+                        <li><b>Hofmann et Puzicha (1998)</b>
+                        </li>
                         Modèles statistiques pour la hierarchisation de documents (RI)
                     </ul>
                 </section>
@@ -158,17 +169,17 @@
                     <h1>Travail présenté</h1>
                 </section>
 
-                <section data-state="mint">
-                    <h1>Méthode</h1>
-                </section>
-
                 <section>
                     <h2>Idée</h2>
-                    <p>On compare la fréquence d'un terme <i>t</i> dans le document <i>d</i> et dans la collection <i>C</i></p>
+                    <p>On compare la fréquence d'un terme <i>t</i> dans le document <i>d</i> et dans la collection <i>C</i>
+                    </p>
                     <ul>
-                        <li>Si <i>t</i> est très présent dans <i>d</i> et rare dans <i>C</i> : <b>self</b></li>
-                        <li>Si <i>t</i> est assez présent dans <i>d</i> et présent dans <i>C</i> : <b>parent</b></li>
-                        <li>Si <i>t</i> est assez présent dans <i>d</i> et très rare dans <i>C</i> : <b>child</b></li>
+                        <li>Si <i>t</i> est très présent dans <i>d</i> et rare dans <i>C</i> : <b>self</b>
+                        </li>
+                        <li>Si <i>t</i> est assez présent dans <i>d</i> et présent dans <i>C</i> : <b>parent</b>
+                        </li>
+                        <li>Si <i>t</i> est assez présent dans <i>d</i> et très rare dans <i>C</i> : <b>child</b>
+                        </li>
                     </ul>
                 </section>
 
@@ -179,7 +190,8 @@
 
                 <section>
                     <h2>Corpus</h2>
-                    <p>Documents provenant de <i>Open Directory (www.dmoz.org)</i></p>
+                    <p>Documents provenant de <i>Open Directory (www.dmoz.org)</i>
+                    </p>
                     <img src="img/openDir.png">
                 </section>
 
@@ -191,36 +203,7 @@
                         <li>On conserve 20 000 documents d'autres catégories (bruit)</li>
                     </ul>
                 </section>
-
-                <section data-markdown>
-                    <script type="text/template">
-                        ## Algorithme
-
-                        Processus simple: on compare les fréquences à des seuils
-
-                        ```
-                        ## 1. Assign a label to feature f as follows:
-
-                        if (f.neg > maxParentNegative){Label=’N’}
-                        
-                        else if (f.neg > maxSelfNegative){Label=’P’}
-                        
-                        else if (f.pos > minSelfPositive){Label=’S’}
-                        
-                        else if ((f.pos < maxChildPositive) and (f.neg < maxChildNegative)){Label=’C’}
-                        
-                        else {Label=’N’}
-                        
-                        ## 2. For each label (P,S,C) sort each feature f with that label
-                        by f.pos
-                        ```
-                    </script>
-                </section>
-
-
-
-
-            </section>    
+            </section>
 
             <section>
                 <section data-state="soothe">
@@ -235,54 +218,57 @@
                         <li>Enfants : 41 catégories ("Agriculture", "Internet", "Tennis"...)</li>
                     </ul>
 
-                    <br><br>
-                    
+                    <br>
+                    <br>
+
                     <h3>Prétraitements</h3>
 
                     <ul>
-                        <li>Pas de <em>stemming</em></li>
-                        <li>Pas d'utilisation de <em>stopwords</em></li>
-                        <li>Enfants séparés au niveau des "ou", "et" et de la ponctuation</li>
+                        <li class="fragment">Pas de <em>stemming</em></li>
+                        <li class="fragment">Pas d'utilisation de <em>stopwords</em></li>
+                        <li class="fragment">Enfants séparés au niveau des "ou", "et" et de la ponctuation</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Première distribution</h2>
-    
-                    <img src="img/cloud-fig1.png"><br>
+
+                    <img src="img/cloud-fig1.png">
+                    <br>
                     <small>Une tendance générale, mais beaucoup d'enfants près des parents</small>
                 </section>
 
                 <section>
                     <h2>Problèmes</h2>
-                    
+
                     <ul>
-                        <li>Catégories mal définies sans informations sur leur contexte</li>
-                        <li>Faible utilisation de "Computers" au pluriel</li>
+                        <li class="fragment">Catégories mal définies sans informations sur leur contexte</li>
+                        <li class="fragment">Faible utilisation de "Computers" au pluriel</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Correctifs</h2>
-                    
+
                     <ul>
-                        <li>Suppression des catégories mal définies</li>
-                        <li>Renommage de "Computers" en "Computer"</li>
+                        <li class="fragment">Suppression des catégories mal définies</li>
+                        <li class="fragment">Renommage de "Computers" en "Computer"</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Seconde distribution</h2>
-    
-                    <img src="img/cloud-fig2.png"><br>
+
+                    <img src="img/cloud-fig2.png">
+                    <br>
                     <small>Une distribution un peu plus claire</small>
                 </section>
 
                 <section>
                     <h2>Problèmes</h2>
                     <ul>
-                        <li>Les documents ne contiennent pas toujours les mots décrivant leurs catégories ("Multimédia" apparaît dans 13% des documents positifs)</li>
-                        <li>Pages d'accueil sans contenu textuel (circa 2002)</li>
+                        <li class="fragment">Les documents ne contiennent pas toujours les mots décrivant leurs catégories ("Multimédia" apparaît dans 13% des documents positifs)</li>
+                        <li class="fragment">Pages d'accueil sans contenu textuel (circa 2002)</li>
                     </ul>
                 </section>
             </section>
@@ -291,15 +277,14 @@
                 <section data-state="sunset">
                     <h1>Expériences :<br> <em>Extended Anchortext</em></h1>
                 </section>
-                
-                <section>
-                    
-                    <h3><em>Extended Anchortext</em></h3>
-                    
-                    <p><em>Extended Anchortext</em> (<em>EA</em>) fait référence au texte qui apparaît autour des hyperliens.
-                    <br><br>
 
-                    Au lieu d'utiliser les textes complets, on va maintenant passer par des documents virtuels composés de ces <em>EA</em>.</p>
+                <section>
+
+                    <h3><em>Extended Anchortext</em></h3>
+
+                    <p><em>Extended Anchortext</em> (<em>EA</em>) fait référence au texte qui apparaît autour des hyperliens.
+                        <br>
+                        <br>Au lieu d'utiliser les textes complets, on va maintenant passer par des documents virtuels composés de ces <em>EA</em>.</p>
 
                     <br>
 
@@ -313,17 +298,21 @@
 
                 <section>
                     <h2>Troisième distribution</h2>
-    
-                    <img src="img/cloud-fig3.png"><br>
-                    <small>Meilleure distribution qu'en $1$</small><br>
+
+                    <img src="img/cloud-fig3.png">
+                    <br>
+                    <small>Meilleure distribution qu'en $1$</small>
+                    <br>
                     <small>e.g., "Multimedia" apparaît maintenant dans 42% des documents positifs</small>
                 </section>
 
                 <section>
                     <h2>Quatrième distribution</h2>
-    
-                    <img src="img/cloud-fig4.png"><br>
-                    <small>Résultats après correctifs</small><br>
+
+                    <img src="img/cloud-fig4.png">
+                    <br>
+                    <small>Résultats après correctifs</small>
+                    <br>
                     <small>Les trois régions sont mieux définies</small>
                 </section>
             </section>
@@ -335,50 +324,104 @@
 
                 <section>
                     <h2>Résultats du "training"</h2>
-                    
-                    <p>Chaque document de la collection sera classé </p>
+
+                    <p>Chaque document de la collection sera classé</p>
 
                     <table class="table table-bordered table-centered">
                         <tr>
-                            <td><em>Feature</em></td>
+                            <td><em>Feature</em>
+                            </td>
                             <td class="success">Ensemble positif</td>
                             <td class="danger">Ensemble négatif</td>
                         </tr>
                         <tr>
-                            <td><em>Parent</em></td>
-                            <td class="success">0 - $\infty$</td>
-                            <td class="danger">0 - 0.08</td>
+                            <td><em>Parent</em>
+                            </td>
+                            <td class="success">$NA$</td>
+                            <td class="danger">$\leq 0.08$</td>
                         </tr>
                         <tr>
-                            <td><em>Self</em></td>
-                            <td class="success">0.4 - $\infty$</td>
-                            <td class="danger">0 - 0.06</td>
+                            <td><em>Self</em>
+                            </td>
+                            <td class="success">$\geq 0.4$</td>
+                            <td class="danger">$\leq 0.06$</td>
                         </tr>
                         <tr>
-                            <td><em>Children</em></td>
-                            <td class="success">0 - 0.4</td>
-                            <td class="danger">0 - 0.02</td>
+                            <td><em>Children</em>
+                            </td>
+                            <td class="success">$\leq 0.4$</td>
+                            <td class="danger">$\leq 0.02$</td>
                         </tr>
                     </table>
                 </section>
 
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Algorithme
+
+                        #### 1. On assigne un label à chaque feature :
+
+                        ```
+                        if      (f.neg > maxParentNegative) { Label = "N" }
+
+                        elseif  (f.neg > maxSelfNegative)   { Label = "P" }
+
+                        elseif  (f.pos > minSelfPositive)   { Label = "S" }
+
+                        elseif ((f.pos < maxChildPositive)
+                            and (f.neg < maxChildNegative)) { Label = "C" }
+                            
+                        else                                { Label = "N" }
+                        
+                        ```
+
+                        #### 2. Pour chaque label, (P,S,C) on trie chaque feature par sa fréquence dans les documents positifs
+                    </script>
+                </section>
+
                 <section>
-                    <h2>Algorithme</h2>
+                    <h2>Résultats : échantillon</h2>
 
-                    <pre>
-                        <code data-trim>
-if      (f.neg > maxParentNegative) { Label = "N" }
+                    <br>
 
-elseif  (f.neg > maxSelfNegative)   { Label = "P" }
+                    <small>
+                        <table class="table table-centered table-bordered">
+                            <tr>
+                                <td><strong>Catégorie</strong></td>
+                                <td><strong><em>Parents</em></strong></td>
+                                <td><strong><em>Selfs</em></strong></td>
+                                <td><strong><em>Children</em></strong></td>
+                            </tr>
+                            <tr>
+                                <td>agriculture</td>
+                                <td>management, science</td>
+                                <td>agriculture, agricultural</td>
+                                <td>soil, sustainable, crop</td>
+                            </tr>
+                            <tr>
+                                <td>anomalies and alternative science</td>
+                                <td>articles, science</td>
+                                <td></td>
+                                <td>alternative, ufo, scientific</td>
+                            </tr>
+                            <tr>
+                                <td>artificial intelligence</td>
+                                <td>systems, computer</td>
+                                <td>artificial, intelligence</td>
+                                <td>ai, computational, artificial intelligence</td>
+                            </tr>
+                        </table>
+                    </small>
+                </section>
 
-elseif  (f.pos > minSelfPositive)   { Label = "S" }
+                <section>
+                    <h2>Résultats : scores</h2>
 
-elseif ((f.pos < maxChildPositive)
-    and (f.neg < maxChildNegative)) { Label = "C" }
-    
-else                                { Label = "N" }
-                        </code>
-                    </pre>
+                    <ul>
+                        <li>Le <em>parent</em> assigné à chaque catégorie par l'Open Directory se trouve toujours dans le top 5</li>
+                        <li>Environ 80% des <em>selfs</em> les mieux classés sont soit identiques, soit des synonymes, soit partagent une racine avec ceux assignés par l'Open Directory</li>
+                        <li>Les <em>children</em> sont durs à évaluer puisqu'un grand nombre de candidats raisonnables ne sont pas listés</li>
+                    </ul>
                 </section>
             </section>
 
@@ -386,11 +429,43 @@ else                                { Label = "N" }
                 <section data-state="submerge">
                     <h1>Remarques</h1>
                 </section>
+
+                <section>
+                    <h2>Points positifs</h2>
+
+                    <ul>
+                        <li class="fragment">Le principe a l'air de fonctionner</li>
+                        <li class="fragment">Extrêmement simpliste</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Limitations</h2>
+
+                    <ul>
+                        <li class="fragment">L'algorithme ne propose pas de solution pour déterminer automatiquement les régions</li>
+                        <li class="fragment">Les régions varient en fonction des catégories</li>
+                        <li class="fragment">Les groupes nominaux ont des occurences positives inférieures aux simples mots</li>
+                        <li class="fragment">Pas de stemming ou de stopwords (e.g. "University of", "Computers" ...)</li>
+                        <li class="fragment">Les catégories ne sont pas uniformément distribuées dans l'Open Directory</li>
+                        <li class="fragment">L'Open Directory circa 2002 n'est pas représentatif du web actuel</li>
+                        <li class="fragment">Beaucoup d'opérations manuelles (suppression et renommage de catégories, définition des frontières...)</li>
+                    </ul>
+                </section>
             </section>
 
             <section>
                 <section data-state="sunset">
                     <h1>Conclusion</h1>
+                </section>
+
+                <section>
+                    <h2>Points importants</h2>
+                    <ul>
+                        <li class="fragment">Une méthode simple qui semble donner des résultats</li>
+                        <li class="fragment">Expériences inconcluantes</li>
+                        <li class="fragment">Changements fondamentaux de la structure des pages web depuis 2002</li>
+                    </ul>
                 </section>
             </section>
 
@@ -403,68 +478,68 @@ else                                { Label = "N" }
     </div>
 
     <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>    
+    <script src="js/reveal.min.js"></script>
 
     <script>
-    // Full list of configuration options available here:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        slideNumber: true,
+        // Full list of configuration options available here:
+         // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            slideNumber: true,
 
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
-        math: {
-            mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
-            config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
-        },
-        // Parallax scrolling
-        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-        // parallaxBackgroundSize: '2100px 900px',
+            math: {
+                mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+                config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
+            },
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
 
-        // Optional libraries used to extend on reveal.js
-        dependencies: [{
-            src: 'lib/js/classList.js',
-            condition: function() {
-                return !document.body.classList;
-            }
-        }, {
-            src: 'plugin/markdown/marked.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/markdown/markdown.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/highlight/highlight.js',
-            async: true,
-            callback: function() {
-                hljs.initHighlightingOnLoad();
-            }
-        }, {
-            src: 'plugin/zoom-js/zoom.js',
-            async: true,
-            condition: function() {
-                return !!document.body.classList;
-            }
-        }, {
-            src: 'plugin/notes/notes.js',
-            async: true,
-            condition: function() {
-                return !!document.body.classList;
-            }
-        }, {
-            src: 'plugin/math/math.js',
-            async: true
-        }]
-    });
+            // Optional libraries used to extend on reveal.js
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: 'plugin/math/math.js',
+                async: true
+            }]
+        });
     </script>
 
 </body>
