@@ -47,7 +47,7 @@
                 <ul>
                     <li>
                         <h2>Introduction</h2>
-                            <h4>Contexte</h4>
+                            <h4>Sujet</h4>
                             <h4>Applications</h4>
                             <h4>Etat de l'art</h4>
                     </li>
@@ -70,7 +70,7 @@
                 </section>
 
                 <section data-state="submerge">
-                    <h1>Contexte</h1>
+                    <h1>Sujet</h1>
                 </section>
 
                 <section>
@@ -179,14 +179,14 @@
 
                 <section>
                     <h2>Corpus</h2>
-                    <p>Documents provenant de <i>Open Directory</i></p>
+                    <p>Documents provenant de <i>Open Directory (www.dmoz.org)</i></p>
                     <img src="img/openDir.png">
                 </section>
 
                 <section>
                     <h2>Corpus</h2>
                     <ul>
-                        <li>On considère les catégories et leurs sous-catégories comme référence</li>
+                        <li>On considère les catégories et leurs sous-catégories comme référence pour les ontologies</li>
                         <li>Pour chaque catégorie, 500 documents sont retenus</li>
                         <li>On conserve 20 000 documents d'autres catégories (bruit)</li>
                     </ul>
@@ -207,9 +207,7 @@
                         
                         else if (f.pos > minSelfPositive){Label=’S’}
                         
-                        else if ((f.pos < maxChildPositive) and
-                        
-                        (f.neg < maxChildNegative)){Label=’C’}
+                        else if ((f.pos < maxChildPositive) and (f.neg < maxChildNegative)){Label=’C’}
                         
                         else {Label=’N’}
                         
